@@ -24,9 +24,9 @@ def calculator(number1, number2, operation):
 
 	return answer
 
-number1 = 2
-number2 = 3.2
-operation = "multiply"
-the_answer = calculator(number1, number2, operation)
-print(the_answer)
+x = 2
+y = 3.2
+symbol = "multiply"
+result = calculator(x, y, symbol)
+print(result)
 
