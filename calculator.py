@@ -24,8 +24,8 @@ def calculator(number1, number2, operation):
 
 	return answer
 
-number1 = "2"
-number2 = "3.2"
+number1 = 2
+number2 = 3.2
 operation = "multiply"
 the_answer = calculator(number1, number2, operation)
 print(the_answer)
