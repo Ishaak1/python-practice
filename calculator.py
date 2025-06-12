@@ -2,23 +2,23 @@
 
 def calculator(number1, number2, symbol):
 	
-	if symbol == "+":
+	if symbol == "add":
 
 		answer = number1 + number2
 
-	elif symbol == "-":
+	elif symbol == "subtract":
 
 		answer = number1 - number2
 
-	elif symbol == "*":
+	elif symbol == "multiply":
 
 		answer = number1 * number2
 
-	elif symbol == "/":
+	elif symbol == "divide":
 
 		answer = number1 / number2
 
-	elif symbol == "**":
+	elif symbol == "exponent":
 
 		answer = number1 ** number2
 
@@ -26,7 +26,7 @@ def calculator(number1, number2, symbol):
 
 number1 = "2"
 number2 = "3.2"
-symbol = "*"
+symbol = "multiply"
 the_answer = calculator(number1, number2, symbol)
 print(the_answer)
 
