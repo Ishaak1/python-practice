@@ -1,24 +1,24 @@
 
 
-def calculator(number1, number2, symbol):
+def calculator(number1, number2, operation):
 	
-	if symbol == "add":
+	if operation == "add":
 
 		answer = number1 + number2
 
-	elif symbol == "subtract":
+	elif operation == "subtract":
 
 		answer = number1 - number2
 
-	elif symbol == "multiply":
+	elif operation == "multiply":
 
 		answer = number1 * number2
 
-	elif symbol == "divide":
+	elif operation == "divide":
 
 		answer = number1 / number2
 
-	elif symbol == "exponent":
+	elif operation == "power":
 
 		answer = number1 ** number2
 
@@ -26,7 +26,7 @@ def calculator(number1, number2, symbol):
 
 number1 = "2"
 number2 = "3.2"
-symbol = "multiply"
-the_answer = calculator(number1, number2, symbol)
+operation = "multiply"
+the_answer = calculator(number1, number2, operation)
 print(the_answer)
 
