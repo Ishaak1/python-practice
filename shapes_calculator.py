@@ -2,7 +2,14 @@ from math import pi, sqrt
 
 def shapes_calculator(dimensions):
 
-	if shape == "triangle":
+	shapes = ["triangle", "circle", "rectangle", "square", "pyramid", "cone", "sphere", "rectangular prism", "cube", "cylinder"]
+	parameters = ["perimeter", "area", "surface area", "volume"]
+
+	if shape not in shapes or parameter not in parameters:
+
+		result = 0
+
+	elif shape == "triangle":
 
 		if parameter == "perimeter":
 
@@ -143,4 +150,4 @@ shape = "cylinder"
 parameter = "volume"
 dimensions = { "radius": 3, "height": 2 }
 calculate_shape = shapes_calculator(dimensions)
-print(calculate_shape)
+print(f"{parameter} = {calculate_shape}")
