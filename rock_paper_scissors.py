@@ -1,35 +1,39 @@
 import random as rd
 
-def cpu_vs_you(cpu, shoot):
+def format_result(cpu, shoot):
 	
 	display = ""	
 	cpu_word_length = len(cpu)
 	user_word_length = len(shoot)
 	space_betweem = 6 * " "
-	odd_num_cpu = (((12 - cpu_word_length) - 1) // 2)
-	even_num_cpu = (12 - cpu_word_length) // 2
-	odd_num_you = ((11 - user_word_length) - 1) // 2
-	even_num_you = ((11 - user_word_length)) // 2
-	space_behind1 = odd_num_cpu + 1
-	space_behind2 = odd_num_you + 1
+	cpu_total_spaces = 12
+	you_total_spaces = 11
+	remaining_space_cpu = cpu_total_spaces - cpu_word_length
+	remaining_space_you = you_total_spaces - user_word_length
 	
 	if cpu_word_length % 2 != 0:
-
-		display += "|" + (" " * odd_num_cpu) + cpu + (" " * space_behind1) + "|"
+		
+		prefix_space = (remaining_space_cpu - 1) // 2
+		suffix_space = prefix_space + 1
+		display += "|" + (" " * prefix_space) + cpu + (" " * suffix_space) + "|"
 		display += space_betweem
 			
 	elif cpu_word_length % 2 == 0:
 
-		display += "|" + (" " * even_num_cpu) + cpu + (" " * even_num_cpu) + "|"
+		open_space = remaining_space_cpu // 2
+		display += "|" + (" " * open_space) + cpu + (" " * open_space) + "|"
 		display += space_betweem
 
 	if user_word_length % 2 != 0:
 
-		display += "|" + (" " * even_num_you) + shoot + (" " * even_num_you) + "|"
+		open_space = remaining_space_you // 2
+		display += "|" + (" " * open_space) + shoot + (" " * open_space) + "|"
 
 	elif user_word_length % 2 == 0:
 		
-		display += "|" + (" " * odd_num_you) + shoot + (" " * space_behind2) + "|"
+		prefix_space = (remaining_space_you - 1) // 2
+		suffix_space = prefix_space + 1
+		display += "|" + (" " * prefix_space) + shoot + (" " * suffix_space) + "|"
 	
 	print(display)
 
@@ -38,7 +42,7 @@ def display(computer, you):
 	print(f"~~~~~~~~~~~~~~      ~~~~~~~~~~~~~")
 	print(f"|  COMPUTER  |      |    YOU    |")
 	print(f"~~~~~~~~~~~~~~  vs  ~~~~~~~~~~~~~")
-	cpu_vs_you(computer, you)
+	format_result(computer, you)
 	print(f"~~~~~~~~~~~~~~      ~~~~~~~~~~~~~")	
 
 def rock_paper_scissors():
