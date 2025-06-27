@@ -1,32 +1,31 @@
-
-
-def calculator(number1, number2, operation):
+def calculator(num1, symbol, num2):
 	
-	if operation == "add":
+	answer = 0
 
-		answer = number1 + number2
+	if symbol == "add":
 
-	elif operation == "subtract":
+		answer = num1 + num2
 
-		answer = number1 - number2
+	elif symbol == "subtract":
 
-	elif operation == "multiply":
+		answer = num1 - num2
 
-		answer = number1 * number2
+	elif symbol == "multiply":
 
-	elif operation == "divide":
+		answer = num1 * num2
 
-		answer = number1 / number2
+	elif symbol == "divide":
 
-	elif operation == "power":
+		answer = num1 / num2
 
-		answer = number1 ** number2
+	elif symbol == "power":
+
+		answer = num1 ** num2
 
 	return answer
 
 x = 2
-y = 3.2
 symbol = "multiply"
-result = calculator(x, y, symbol)
+y = 3.2
+result = calculator(x, symbol, y)
 print(result)
-
